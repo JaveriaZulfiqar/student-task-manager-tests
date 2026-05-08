@@ -9,5 +9,7 @@ RUN apt-get update && apt-get install -y \
 RUN pip install selenium pytest pytest-html
 
 ENV PYTHONUNBUFFERED=1
+ENV HEADLESS=true
 
 WORKDIR /tests
+COPY . .
